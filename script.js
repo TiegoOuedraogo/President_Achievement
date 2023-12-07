@@ -173,6 +173,7 @@ function displayWordOptions() {
     for (let i = 1; i <= options.length; i++) {
         document.getElementById('word' + i).textContent = options[i - 1];
     }
+    
 }
 
 function processGuess(userGuess) {
@@ -193,20 +194,6 @@ function processGuess(userGuess) {
     moveToNextWord();
 }
 
-function processGuess(userGuess) {
-    if (userGuess.toLowerCase() === currentWord.word.toLowerCase()) {
-        score++;
-        displayMessage("Correct! Great job!");
-    } else {
-        score--;
-        displayMessage("Incorrect. Try again!");
-    }
-    
-    // Additional logic such as updating the score display and moving to the next word
-    updateScoreDisplay();
-    checkGameStatus();
-    moveToNextWord();
-}
 
 // Event listener for the 'Submit Guess' button
 document.getElementById('submitGuess').addEventListener('click', function() {
@@ -221,6 +208,7 @@ function generateWordOptions(correctWord, wordList) {
     while (options.size < 4) {
         let randomWord = wordList[Math.floor(Math.random() * wordList.length)].word;
         options.add(randomWord);
+        wordList.splice(randomWord, 1)
     }
 
     return Array.from(options).sort(() => Math.random() - 0.5); // Shuffle the options
@@ -314,7 +302,7 @@ function initializeGame() {
     bonusAwarded=false
     displayHint();
     updateScoreDisplay();
-    generateWordOptions();
+    
 }
 
 
