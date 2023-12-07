@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="introSection">
+        <h2>Welcome to the Word Guessing Game!</h2>
+        <p>In this game, you will be given hints to guess words. 
+            If you guess a word correctly within the first two tries, 
+            you'll earn a bonus! The game continues until you decide to end it. 
+            Your final score will be saved.</p>
+       
+    </div>
+
+    <div id="gameContainer">
+        <h1>Word Guessing Game</h1>
+        <p id="hint">Hint: </p>
+        <div id="wordChoices">
+            <span id="word1">Word 1</span>
+            <span id="word2">Word 2</span>
+            <span id="word3">Word 3</span>
+            <span id="word4">Word 4</span>
+        </div>
+        
+    <input type="text" id="guessInput" placeholder="Type the correct word here">
+    <button id="submitGuess">Submit Guess</button>
+        <p id="message"></p>
+        <p>Score: <span id="score">0</span></p>
+        <button id="restartGame">Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

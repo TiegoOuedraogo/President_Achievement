@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+#introSection, #gameContainer {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1, h2 {
+    color: #2c3e50;
+}
+
+#wordChoices {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#wordChoices span {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#wordChoices span:hover {
+    background-color: #2980b9;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-items: center;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #e74c3c;
+}
